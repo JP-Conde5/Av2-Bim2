@@ -9,5 +9,6 @@ export const styles = StyleSheet.create({
     cam:{
         width: 200,
         height: 200,
+        margin: 50
     }
 })

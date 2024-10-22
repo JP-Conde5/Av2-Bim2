@@ -1,3 +1,4 @@
+import React from "react"
 import { CameraView, CameraType, useCameraPermissions, CameraCapturedPicture, BarcodeScanningResult } from "expo-camera";
 import { useRef, useState } from "react"
 import { Text, View, TouchableOpacity, Alert, ImageBackground, Image } from 'react-native'
@@ -44,9 +45,9 @@ export function Take(){
     }
     if(scanned){
         return(
-            <View>
-                <TouchableOpacity><MaterialCommunityIcons name="qrcode-scan" size={40} color={colors.primary}/></TouchableOpacity>
-                <CameraView facing={side} ref={refCamView}/>
+            <View style={styles.container}>
+                <TouchableOpacity onPress={()=>setScanned(false)}><MaterialCommunityIcons name="qrcode-scan" size={40} color={colors.primary}/></TouchableOpacity>
+                <CameraView style={styles.cam} facing={side} ref={refCamView}/>
             </View>
         )
     }

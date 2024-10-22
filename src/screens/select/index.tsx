@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { View, Image, TouchableOpacity} from "react-native";
 import * as ImagePicker from "expo-image-picker";
@@ -16,15 +17,15 @@ export function Select(){
         })
         if(!result.canceled){
             setImage(result.assets[0].uri)
+            console.log(image)
         }
     }
+   
     return(
         <View style={styles.container}>
-            <View style={styles.image}>
-                {image && <Image source={{uri: image}}/>}
-            </View>
+            {image && <Image style={styles.image} source={{uri: image}}/>}
             <TouchableOpacity onPress={pickImage}><FontAwesome name="photo" size={40} color={colors.primary}/></TouchableOpacity>
         </View>
-
     )
+    
 }

@@ -7,7 +7,8 @@ export const styles = StyleSheet.create({
         alignItems: 'center'
     },
     image:{
-        width: 20,
-        height: 20,
+        width: 200,
+        height: 200,
+        margin: 10,
     }
 })
