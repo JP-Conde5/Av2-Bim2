@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Av2-2bim",
+    "slug": "Av2-2bim",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permite ${PRODUCT_NAME) acessar a sua câmera.",
+          "microphonePermission": "Permita $(PRODUCT_NAME) acessar seu microfone.",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Permita $(PRODUCT_NAME) acessar suas fotos.",
+          "savePhotosPermission": "Permita $(PRODUCT_NAME) salvar suas fotos.",
+          "isAcessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O aplicativo acessa suas fotos para qye você possa compartilhá-la com seus amigos."
+        }
+      ]
+    ]
+  }
+}
