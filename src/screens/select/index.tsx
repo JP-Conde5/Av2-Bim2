@@ -17,7 +17,6 @@ export function Select(){
         })
         if(!result.canceled){
             setImage(result.assets[0].uri)
-            console.log(image)
         }
     }
    

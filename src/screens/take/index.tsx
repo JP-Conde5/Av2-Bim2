@@ -56,7 +56,7 @@ export function Take(){
             <TouchableOpacity onPress={toogleCameraSide}><MaterialIcons name="flip-camera-android" size={40} color={colors.primary}/></TouchableOpacity>
             <CameraView style={styles.cam} facing={side} ref={refCamView} barcodeScannerSettings={{barcodeTypes: ['qr']}} onBarcodeScanned={handleBarcodeScanner}/>
             <TouchableOpacity onPress={takePicture}><MaterialCommunityIcons name="camera-iris" size={40} color={colors.primary}/></TouchableOpacity>
-            {photo && <Image source={{uri:photo.uri}}/>}
+            {photo && <Image style={styles.image} source={{uri:photo.uri}}/>}
         </View>
     )
 }
